@@ -1,1 +1,11 @@
-<p>snackbar works!</p>
+<div class="snackbar-container">
+    <div class="snackbar-content">
+        <div class="icon">
+            <mat-icon [svgIcon]="snackbarData?.icon"></mat-icon>
+        </div>
+        <span class="snackbar-message" [innerHTML]="'hello'"></span>
+    </div>
+    <ng-container>
+        <mat-icon class="close-icon"></mat-icon>
+    </ng-container>
+</div>
