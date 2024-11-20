@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators, FormBuilder, AbstractControl, Valid
 import { AlertType } from 'src/app/shared/models/alert-type';
 import { UtilService } from 'src/app/shared/services/util.service';
 import Validation from 'src/app/shared/validation';
+import { MainService } from './main.service';
 
 @Component({
   selector: 'app-main',
@@ -15,8 +16,8 @@ export class MainComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private utilService: UtilService
-
+    private utilService: UtilService,
+    private mainService: MainService
   ) { }
 
   ngOnInit(): void {
@@ -54,6 +55,22 @@ export class MainComponent implements OnInit {
   reset(): void {
     this.utilService.alert('testing', AlertType.success);
   }
+
+  /**
+   * spinner
+   */
+  public spinner(): void {
+    this.mainService.randomCall().subscribe((data)=>{
+      console.log(data);
+    })
+  }
+
+  // public spinner(): void {
+  //   this.mainService.spinnerTest().subscribe((data)=>{
+  //     console.log(data);
+  //   })
+  // }
+
 
   // validateNumber(control: AbstractControl): { [key: string]: any } | null {
   //   if (control.value === null || control.value.length === 0) {

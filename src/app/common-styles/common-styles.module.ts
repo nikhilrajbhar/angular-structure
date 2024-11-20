@@ -4,6 +4,7 @@ import { SpinnerComponent } from './component/spinner/spinner.component';
 import { SnackbarComponent } from './component/snackbar/snackbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -14,7 +15,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   imports: [
     CommonModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule
+  ],
+  exports:[
+    SpinnerComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

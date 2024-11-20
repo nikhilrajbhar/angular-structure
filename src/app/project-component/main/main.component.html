@@ -10,7 +10,7 @@
         </mat-form-field><br />
         <mat-form-field>
             <mat-label>Number</mat-label>
-            <input matInput type="text" maxlength="4" formControlName="number" name="number" id="number">
+            <input matInput type="text" maxlength="10" [value]="form.controls['number'].value | phonenumber" formControlName="number" name="number" id="number">
             <mat-hint *ngIf="form.controls['number']?.errors['yearInvalid']"> kljasd</mat-hint>
         </mat-form-field><br />
         <mat-form-field>
@@ -23,5 +23,6 @@
         </mat-form-field><br />
         <button type="submit">Submit</button>
         <button (click)="reset()">Reset</button>
+        <button (click)="spinner()">check-spinner</button>
 
 </form>
