@@ -22,7 +22,7 @@ export class SnackbarService {
       verticalPosition: snackbarconfig.verticalPosition || 'top',
       data: {
         message: snackbarconfig.message,
-        hasCloseBtn: snackbarconfig.hasCloseBtn,
+        hasCloseBtn: true,
         icon: snackbarconfig.icon
       }
     })

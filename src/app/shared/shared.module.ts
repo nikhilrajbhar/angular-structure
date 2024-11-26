@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PhonenumberPipe } from './pipes/phonenumber.pipe';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // import { CommonStylesModule } from '../common-styles/common-styles.module';
 
 
@@ -17,12 +17,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     MatIconModule,
     MatSnackBarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSlideToggleModule
     
   ],
   exports: [
     MatIconModule,
     MatSnackBarModule,
+    MatSlideToggleModule,
     PhonenumberPipe,
     MatProgressSpinnerModule  
   ],
